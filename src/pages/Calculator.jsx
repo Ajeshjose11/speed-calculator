@@ -11,17 +11,14 @@ function Calculator() {
     if (speed == "" && distance != "" && time != "") {
       let s = (distance / (time / 60)).toFixed(2);
       result = "Speed = " + s + " km/h";
-      document.getElementById("speed").value = s;
     } 
     else if (distance == "" && speed != "" && time != "") {
       let d = (speed * (time / 60)).toFixed(2);
       result = "Distance = " + d + " km";
-      document.getElementById("distance").value = d;
     } 
     else if (time == "" && speed != "" && distance != "") {
       let t = ((distance / speed) * 60).toFixed(2);
       result = "Time = " + t + " minutes";
-      document.getElementById("time").value = t;
     } 
     else {
       result = "Enter any two values!!";
